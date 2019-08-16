@@ -3,7 +3,7 @@ function binarySearch($file, $searchingKey){
     $handle = fopen($file, "r");
 
     while(!feof($handle)){
-        $data = fgets($handle, 4000);
+        $data = fgets($handle);
         $split = explode('\x0A', $data);
 
         foreach($split as $key => $value){
